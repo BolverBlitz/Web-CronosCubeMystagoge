@@ -110,7 +110,7 @@ router.get('/QandA', GETlimiter, async (reg, res, next) => {
                   antworten: Antworten
               });
             }else{
-              let Turl = `http://twitter.com/intent/tweet?text=${encodeURIComponent(i18n(value.data, "Web" + CountChar(value.data)[0][0]))}`
+              let Turl = `http://twitter.com/intent/tweet?text=${encodeURIComponent(i18n(value.lang, "Web" + CountChar(value.data)[0][0]))}`
               res.status(200);
               res.json({
                   ergebniss: i18n(value.lang, CountChar(value.data)[0][0]),
